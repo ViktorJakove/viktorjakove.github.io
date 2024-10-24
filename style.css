@@ -1,0 +1,154 @@
+
+body {
+    margin: 0;
+    background-color: #505050;
+}
+/*sticky*/
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #1E1E1E;
+    color: #569CD6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    width: 100%;
+    z-index: 1000;
+}
+.sticky h1{
+    color: white;
+}
+.sticky a {
+    text-decoration: none;
+    color: #569CD6;
+}
+nav ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li, h1 {
+    margin: 0 30px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    text-decoration: underline;
+}
+.dropdown{
+    position: absolute;
+    background-color: #333333;
+    list-style-type: none;
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(-10px)translateX(-30%); /* Start slightly above */
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for both */
+    visibility: hidden; /* Initially hidden */
+    color: #D7BA7D;
+}
+
+nav li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0)translateX(-30%);
+    visibility: visible;
+}
+
+.dropdown li{
+    text-align: left;
+    padding: 7px 10px;
+    transition: background-color 0.3s ease;
+    color: #D7BA7D;
+}
+.dropdown li:hover {
+    background-color: #2b2b2b;
+}
+
+/*flexbox contacts*/
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+.contact-details a, .contact-details {
+    text-decoration: none;
+    color: aqua;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-item {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    background: none;
+}
+
+.contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.contact-details {
+    display: none;
+    padding: 10px 0;
+    color: white;
+}
+
+.contact-item.active .contact-details {
+    display: block;
+}
+
+/*ukol pointer*/
+.item div{
+    cursor: pointer;
+}
+
+/*parallax, obrazky*/
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Required for positioning child elements */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.logo {
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.85; /* Set opacity */
+    z-index: 10;
+}
+.logo:hover{
+    opacity: 0.6;
+}
+
+.image-container img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire container */
+    z-index: 0; /* Background image will have a lower z-index */
+}
+.smooth-strip {
+    position: absolute;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    height: 150px; /* Height of the strip */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 5; /* Ensure it overlaps the posters */
+    pointer-events: none; /* Prevents the strip from interfering with click events */
+}.poster-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute; 
+    padding: 20px; 
+    color: whitesmoke; 
+    width: 35%; 
+    font-size: large;
+}

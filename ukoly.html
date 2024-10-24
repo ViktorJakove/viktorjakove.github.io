@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bv</title>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky">
+        <h1><a href="index.html">bv</a></h1>
+        <nav>
+        <ul>
+            <li>Hry
+                <ul class="dropdown">
+                    <li>Undefined</li>
+                    <li>1v1 Snake</li>
+                    <li>Playboy 365</li>
+                    <li>Coming up...</li>
+                </ul>
+            </li>
+            <li>Hudba
+                <ul class="dropdown">
+                    <li>Rybí prsty</li>
+                    <li>Playlist</li>
+                </ul>
+            </li>
+            <li>Ostatní
+                <ul class="dropdown">
+                    <li>Reelsy</li>
+                    <li>epilepsie</li>
+                </ul>
+            </li>
+            <li><a href="ukoly.html">Úkoly</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        </nav>
+    </header>
+
+   
+        <input type="button" id="tlacitko" value="TEST"/>
+        <input type="text" id="vstup" value=""/>
+        <div id="test"></div>
+        <script>
+            function remove(element) {
+                element.parentNode.removeChild(element);
+            }function addBefore(element) {
+                const parent = element.parentNode;
+
+                let newDiv = document.createElement("div");
+                newDiv.classList.add("item");
+                newDiv.innerHTML = novyElement();
+
+                parent.insertBefore(newDiv, element);
+            }
+            function novyElement(event) {
+                console.log("Hello world");
+                let el = document.getElementById("test");
+    
+                let div = document.createElement("div");
+                div.classList.add("item");
+                let vystup = document.getElementById("vstup").value;
+                if(vystup == "")vystup = "UNDEFINED!";
+                div.innerHTML= vystup;
+                document.getElementById("vstup").value = "";
+    
+                let divClose = document.createElement("div");
+                divClose.innerHTML = "❌";
+                divClose.addEventListener("click", (event) => {
+                    remove(div);
+                });
+                div.appendChild(divClose);
+
+                let divAdd = document.createElement("div");
+                divAdd.innerHTML = "➕";
+                divAdd.addEventListener("click", (event) => {
+                    addBefore(div);
+                });
+                div.appendChild(divAdd);
+                
+
+                el.appendChild(div);
+            }
+    
+            let tlacitko=document.getElementById("tlacitko");
+            tlacitko.addEventListener("click", novyElement)
+    
+        </script>
+
+
+</body>
+
+</html>
