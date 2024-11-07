@@ -4,7 +4,7 @@ let selectedCards = [];
 let player = 0;
 let pairsFound = 0;
 let cardsFound = [0,0];
-let cash = [10,10];
+let cash = [0,0];
 
 let buyLock = false;
 let tripleDraft = false;
