@@ -3,66 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bv</title>
-    <style>
-        
-    </style>
+    <title>Memory Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="sticky">
-        <h1 class="sfx" data-sound="nuh-uh.mp3">bv</h1>
-        <audio id="sound"></audio>
-        <script src="playSound.js"></script>
-        <nav>
-        <ul>
-            <li>Hry
-                <ul class="dropdown">
-                    <a href="#undefined"><li>Undefined</li></a>
-                    <a href="#snake"><li>Snake 1v1</li></a>
-                    <li>Playboy 365</li>
-                    <li>Coming up...</li>
-                </ul>
-            </li>
-            <li>Hudba
-                <ul class="dropdown">
-                    <li>Rybí prsty</li>
-                    <li>Playlist</li>
-                </ul>
-            </li>
-            <li>Ostatní
-                <ul class="dropdown">
-                    <li>Reelsy</li>
-                    <li>epilepsie</li>
-                </ul>
-            </li>
-            <li><a href="ukoly.html">Úkoly</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        </nav>
-    </header>
-
-    <div class="image-container" id="undefined">
-        <img src="undefined_poster.png" alt="undefined_poster">
-    </div>
-    <div class="logo">
-        <a href="https://bagr-viktor.itch.io/undefined">
-            <img src="undefined_logo.png" alt="undefined_logo" class="logo" style="position: absolute; top: 30vh; left: calc(40% - 50px);">
-        </a>
-    </div>
-    <div class="smooth-strip" style="top: 106vh;" ></div>
-    <div class="image-container" id="snake">
-        <img src="snake_poster.png" alt="snake_poster">
-    </div>
-    <div class="poster-text" style="top: 145vh; left: 5%;">
-        <h2>Had 1v1</h2>
-        <p>Poražte své přátele v klasickém hadovi! <br><br> Škoďte protihráčům za pomoci silných power-upů a zrychlení!</p>
-    </div>
-    <div class="logo">
-        <img src="snake_logo.png" alt="snake_logo" class="logo" style="position: absolute; top: 125vh; left: 40%;">
-    </div>
-    <img src="snake_pic.png" alt="snake_screen" style="position: absolute; top: 160vh; left: 63%; width: 30%; height: 50%;">
+    <div class="game-container"></div>
+    <script src="pexeso_logic.js"></script>
 </body>
-   
 </html>

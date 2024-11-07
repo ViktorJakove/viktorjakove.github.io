@@ -1,2 +1,1 @@
-# bvsite
-bv stranka :P
+epicke pexeso s abilitkami
